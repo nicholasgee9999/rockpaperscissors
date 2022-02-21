@@ -1,4 +1,8 @@
+//universal variables
+
 const choices = ["rock", "paper", "scissors"];
+let userScore = 0;
+let computerScore = 0;
 
 //player selection
 
@@ -23,15 +27,19 @@ function playRound (userChoice, computerPlay) {
         if (computerPlay === "rock"){
             console.log("it's a tie!");
         } else if (computerPlay === "paper") {
-            console.log("you lose, paper beats rock!")
+            console.log("you lose, paper beats rock!");
+            computerScore++;
         } else if (computerPlay === "scissors") {
             console.log("you win, rock beats scissors!");
+            userScore++;
         }
     } else if (userChoice === "paper") {
         if (computerPlay === "rock"){
             console.log("you win, paper beats rock!");
+            userScore++;
         } else if (computerPlay === "scissors") {
-            console.log("you lose, scissors beat paper!")
+            console.log("you lose, scissors beat paper!");
+            computerScore++;
         } else if (computerPlay === "paper") {
             console.log("it's a tie!")
         }
@@ -40,8 +48,11 @@ function playRound (userChoice, computerPlay) {
             console.log("it's a tie!");
         } else if (computerPlay === "rock") {
             console.log("you win, scissors beat rock!")
+            userScore++;
         } else if (computerPlay === "paper") {
-            console.log("you lose, paper beats scissors!")
+            console.log("you lose, paper beats scissors!");
+            computerScore++;
         }
         }
     }
+
