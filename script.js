@@ -10,7 +10,7 @@ for (let i = 0; i < 5; i++){
 
 //player selection
 
-let userChoice = prompt ("Rock, Paper, Scissors");
+let userChoice = prompt ("Rock, Paper, Scissors").toLowerCase();
 if (userChoice === "rock" || userChoice === "paper" || userChoice === "scissors"){
     console.log("You chose " + userChoice); 
     } else {
@@ -69,5 +69,5 @@ function playRound () {
             
         }
         }
+        }
     }
-}
