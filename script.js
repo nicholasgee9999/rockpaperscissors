@@ -1,21 +1,21 @@
 //universal variables
 
 const choices = ["rock", "paper", "scissors"];
-let choice
 let userScore = 0;
 let computerScore = 0;
 
+//for loop 
+
+for (let i = 0; i < 5; i++){
 
 //player selection
 
-
-const userChoice = prompt ("Rock, Paper, Scissors");
+let userChoice = prompt ("Rock, Paper, Scissors");
 if (userChoice === "rock" || userChoice === "paper" || userChoice === "scissors"){
     console.log("You chose " + userChoice); 
     } else {
         console.log("Error! Try again!");
 }
-
 
 //computer play
 
@@ -24,9 +24,9 @@ console.log("Computer chose " + computerPlay);
 
 //play round
 
-const winner = playRound (userChoice, computerPlay);
+const round = playRound (userChoice, computerPlay);
 
-function playRound (userChoice, computerPlay) {
+function playRound () {
     if (userChoice === "rock") {
         if (computerPlay === "rock"){
             console.log("it's a tie!");
@@ -70,3 +70,4 @@ function playRound (userChoice, computerPlay) {
         }
         }
     }
+}
