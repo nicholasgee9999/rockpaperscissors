@@ -29,3 +29,26 @@
 .scoreboard img {
     width: 300px;
 }
+
+.score {
+    text-align: center;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.rock {
+    margin-left: 400px;
+}
+
+.scissors {
+    margin-right: 400px;
+}
