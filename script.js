@@ -8,24 +8,22 @@ const rockbtn = document.querySelector('.rock');
 const paperbtn = document.querySelector('.paper');
 const scissorsbtn = document.querySelector('.scissors');
 const messagediv = document.querySelector('.message');
-const messageoption = document.querySelector('.messageoption');
+const resultMessage = document.querySelector('.resultMessage');
 
 let computerPlay = choices [Math.floor(Math.random() *3)];
 
-
 let userChoice = (rockbtn, paperbtn, scissorsbtn)
     rockbtn.addEventListener('click', () => {
-        console.log("you chose rock")
             if (computerPlay === "rock"){
-                console.log("it's a tie!");
+                resultMessage.innerHTML = "you chose rock, computer chose rock, it's a tie!";
                 console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
             } else if (computerPlay === "paper") {
                 computerScore++;
-                console.log("you lose, paper beats rock!");
+                resultMessage.innerHTML = "you chose rock, computer chose paper, you lose, paper beats rock!";
                 console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
             } else if (computerPlay === "scissors") {
                 userScore++;
-                console.log("you win, rock beats scissors!");
+                resultMessage.innerHTML = "you chose rock, computer chose scissors, you win, rock beats scissors!";
                 console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
             }
         //messageoption.innerHTML = "Rock";
@@ -33,17 +31,16 @@ let userChoice = (rockbtn, paperbtn, scissorsbtn)
     })
     
     paperbtn.addEventListener('click', () => {
-        console.log("you chose paper")
         if (computerPlay === "rock"){
             userScore++;
-            console.log("you win, paper beats rock!");
+            resultMessage.innerHTML = "you chose paper, computer chose rock, you win, paper beats rock!";;
             console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
         } else if (computerPlay === "scissors") {
             computerScore++;
-            console.log("you lose, scissors beat paper!");
+            resultMessage.innerHTML = "you chose paper, computer chose scissors, you lose, scissors beats paper";;
             console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
         } else if (computerPlay === "paper") {
-            console.log("it's a tie!");
+            resultMessage.innerHTML = "you chose paper, computer chose paper, it's a tie!";
             console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
         }
     })
@@ -52,18 +49,16 @@ let userChoice = (rockbtn, paperbtn, scissorsbtn)
 
     
     scissorsbtn.addEventListener('click', () => {
-        console.log("you chose scissors")
         if (computerPlay === "scissors") {
-            console.log("it's a tie!");
+            resultMessage.innerHTML = "you chose scissors, computer chose scissors, it's a tie!";
+            console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
+        } else if (computerPlay === "paper") {
+            userScore++;
+            resultMessage.innerHTML = "you chose scissors, computer chose paper, you win, scissors beat paper!";
             console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
         } else if (computerPlay === "rock") {
-            userScore++;
-            console.log("you win, scissors beat rock!");
-            console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
-            userScore++;
-        } else if (computerPlay === "paper") {
             computerScore++;
-            console.log("you lose, paper beats scissors!");
+            resultMessage.innerHTML = "you chose scissors, you lose, rock beats scissors!";
             console.log ("User Score is " + userScore + " & " + "Computer Score is " + computerScore);
         }
     })
