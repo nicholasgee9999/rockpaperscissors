@@ -1,0 +1,31 @@
+*{
+    background-color: rgb(170, 170, 170);
+}
+
+.header h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.scoreboard {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.playerone {
+    margin-left: 300px;
+}
+
+.playertwo {
+    margin-right: 300px;
+}
+
+.scoreboard h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.scoreboard img {
+    width: 300px;
+}
