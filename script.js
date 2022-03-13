@@ -4,6 +4,31 @@ const choices = ["rock", "paper", "scissors"];
 let userScore = 0;
 let computerScore = 0;
 
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+
+rock.addEventListener('click', () => {
+    console.log("rock");
+})
+
+paper.addEventListener('click', () => {
+    console.log("paper");
+})
+
+scissors.addEventListener('click', () => {
+    console.log("scissors")
+})
+
+
+/*
+
+//universal variables
+
+const choices = ["rock", "paper", "scissors"];
+let userScore = 0;
+let computerScore = 0;
+
 //for loop 
 
 for (let i = 0; i < 5; i++){
@@ -71,3 +96,5 @@ function playRound () {
         }
         }
     }
+
+    */
